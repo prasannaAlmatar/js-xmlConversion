@@ -202,14 +202,14 @@ var example = [
   },
 ];
 var example1 = {
-  Transaction: [
-    {
+  Transaction: {
+    
       _attr: {
         timestamp: '2023-03-06T16:20:00-04:00',
         id: 'jeddah-ibis-jeddah-city-center-1766850',
         partner: 'almatar',
       },
-    },
+    
     {
       PropertyDataSet: [
         {
@@ -379,11 +379,6 @@ const options = {
   ignoreAttributes: false,
   format: true,
 };
-
-const builder = new XMLBuilder(options);
-//console.log(xmlF(example, { declaration: true }));
-//console.log(builder.build(example1));
-
 const options1 = {
   attrPrefix: '@_',
   textNodeName: '#text',
@@ -393,9 +388,18 @@ const options1 = {
   ignoreRootElement: false,
   textNodeConversion: true,
   textAttrConversion: false,
+  ignoreAttributes: false,
+  format: true,
 };
 
-const jsonObj = builder.build(example);
+const builder = new XMLBuilder(options1);
+//console.log(xmlF(example, { declaration: true }));
+//console.log(builder.build(example1));
+
+
+
+
+const jsonObj = builder.build(example1);
 
 console.log('ggg');
 console.log(jsonObj);
