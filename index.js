@@ -384,7 +384,7 @@ const builder = new XMLBuilder(options);
 //console.log(xmlF(example, { declaration: true }));
 //console.log(builder.build(example1));
 
-const options = {
+const options1 = {
   attrPrefix: '@_',
   textNodeName: '#text',
   ignoreNonTextNodeAttr: true,
@@ -395,14 +395,7 @@ const options = {
   textAttrConversion: false,
 };
 
-const jsonObj = builder.build(example1);
-var array = jsonToArray(jsonObj);
-const data = {
-  data: array,
-  meta: {
-    fields: ['name', 'value'],
-    type: 'tabular',
-  },
-};
+const jsonObj = builder.build(example);
+
 console.log('ggg');
-console.log(array);
+console.log(jsonObj);
