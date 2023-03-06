@@ -19,8 +19,12 @@ let room_id = [
   'executive-suite-1766593',
   'economy-junior-quadruple-1766593',
 ];
+let package_id = [
+  'jeddah-ibis-jeddah-city-center-1766850-standard-room-double-bed-bed-and-breakfast',
+  'jeddah-ibis-jeddah-city-center-1766850-standard-room-twin-beds-bed-and-breakfast',
+];
 
-var example5 = [
+var example = [
   {
     Transaction: [
       {
@@ -142,4 +146,4 @@ var example5 = [
     ],
   },
 ];
-console.log(xmlF(example5, { declaration: true }));
+console.log(xmlF(example, { declaration: true }));
