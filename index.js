@@ -1,8 +1,25 @@
 // Import stylesheets
 import './style.css';
+var moment = require('moment');
+
+console.log('Welcome to Programiz!');
+
+var a = 34;
+var b = 7;
+for (let i = 1; i <= a / b; i++) {
+  for (let ib = i; ib <= b; i++) {
+    console.log(
+      moment().add(ib, 'days').format('MM/DD/YYYY'),
+      moment()
+        .add(ib + 1, 'days')
+        .format('MM/DD/YYYY')
+    );
+  }
+  console.log(i);
+}
 
 // Write Javascript code!
-const appDiv = document.getElementById('app');
+/*const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
 var xmlF = require('xml');
@@ -402,4 +419,4 @@ const builder = new XMLBuilder(options1);
 const jsonObj = builder.build(example1);
 
 console.log('ggg');
-console.log(jsonObj);
+console.log(jsonObj);*/

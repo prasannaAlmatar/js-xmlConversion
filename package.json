@@ -5,6 +5,8 @@
   "dependencies": {
     "@chaneyoukaye/xml": "^1.0.6",
     "fast-xml-parser": "^4.1.3",
+    "moment": "^2.29.4",
+    "string_decoder": "^1.3.0",
     "xml": "^1.0.1",
     "xml-js": "^1.6.11"
   }
