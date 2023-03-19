@@ -4,19 +4,27 @@ var moment = require('moment');
 
 console.log('Welcome to Programiz!');
 
-var a = 34;
-var b = 7;
-for (let i = 1; i <= a / b; i++) {
-  for (let ib = i; ib <= b; i++) {
-    console.log(
-      moment().add(ib, 'days').format('MM/DD/YYYY'),
-      moment()
-        .add(ib + 1, 'days')
-        .format('MM/DD/YYYY')
-    );
-  }
-  console.log(i);
+var b=7
+var a=37
+var temp=1
+for (temp; temp <= a; temp+7) {
+	console.log(temp)
+	gener(1,b,temp)
+//temp+=b;
 }
+
+function gener(initialDate,no_of_days,temp){
+console.log(initialDate,no_of_days,temp)
+var g=temp;
+ for (initialDate = 1; initialDate <= no_of_days; initialDate++) {
+ 	console.log(moment().add(g, "days").format("MM/DD/YYYY"),
+            "-",moment()
+              .add(g + 1, "days")
+              .format("MM/DD/YYYY"))
+             g++;
+ }
+}
+
 
 // Write Javascript code!
 /*const appDiv = document.getElementById('app');
