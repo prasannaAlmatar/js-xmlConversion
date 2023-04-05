@@ -4,27 +4,13 @@ var moment = require('moment');
 
 console.log('Welcome to Programiz!');
 
-var b=7
-var a=37
-var temp=1
-for (temp; temp <= a; temp+7) {
-	console.log(temp)
-	gener(1,b,temp)
-//temp+=b;
+async function myFunction() {
+  return console.log('Hello');
 }
 
-function gener(initialDate,no_of_days,temp){
-console.log(initialDate,no_of_days,temp)
-var g=temp;
- for (initialDate = 1; initialDate <= no_of_days; initialDate++) {
- 	console.log(moment().add(g, "days").format("MM/DD/YYYY"),
-            "-",moment()
-              .add(g + 1, "days")
-              .format("MM/DD/YYYY"))
-             g++;
- }
-}
-
+myFunction().then(function (value) {
+  myDisplayer(value);
+});
 
 // Write Javascript code!
 /*const appDiv = document.getElementById('app');
