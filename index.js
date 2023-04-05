@@ -3,14 +3,17 @@ import './style.css';
 var moment = require('moment');
 
 console.log('Welcome to Programiz!');
-
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 async function myFunction() {
+  await delay(100000);
   return console.log('Hello');
 }
 
 myFunction().then(function (value) {
-  myDisplayer(value);
+  console.log('vv');
 });
+
+console.log('ggg');
 
 // Write Javascript code!
 /*const appDiv = document.getElementById('app');
