@@ -4,7 +4,8 @@ var moment = require('moment');
 
 let a = 0;
 let i = 10;
-while (true) {
+let x=0
+while (x<=200) {
   if (i <= 1) {
     if (a <= 20) {
       console.log(a++, i);
@@ -12,6 +13,7 @@ while (true) {
       i--;
     }
   }
+  x++;
 }
 
 // Write Javascript code!
