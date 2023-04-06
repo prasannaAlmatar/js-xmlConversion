@@ -5,7 +5,7 @@ var moment = require('moment');
 console.log('Welcome to Programiz!');
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 async function myFunction() {
-  await delay(100000);
+  await delay(1000);
   return console.log('Hello');
 }
 
