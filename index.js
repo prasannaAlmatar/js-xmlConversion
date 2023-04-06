@@ -2,18 +2,17 @@
 import './style.css';
 var moment = require('moment');
 
-console.log('Welcome to Programiz!');
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-async function myFunction() {
-  await delay(1000);
-  return console.log('Hello');
+let a = 0;
+let i = 10;
+while (true) {
+  if (i <= 1) {
+    if (a <= 20) {
+      console.log(a++, i);
+    } else {
+      i--;
+    }
+  }
 }
-
-myFunction().then(function (value) {
-  console.log('vv');
-});
-
-console.log('ggg');
 
 // Write Javascript code!
 /*const appDiv = document.getElementById('app');
