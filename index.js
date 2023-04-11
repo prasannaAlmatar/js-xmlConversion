@@ -1,21 +1,10 @@
 // Import stylesheets
 import './style.css';
 var moment = require('moment');
+import * as crypto from 'crypto-js';
 
-let a = 0;
-let i = 10;
-let x=0
-while (x<=200) {
-  if (i <= 1) {
-    if (a <= 20) {
-      console.log(a++, i);
-    } else {
-      i--;
-    }
-  }
-  x++;
-}
-
+let aec = 'U2FsdGVkX19jIxnEHzAwFYZbyan/QqZ1N8cglQrKg8o=';
+console.log(crypto.AES.decrypt(aec, 'AB7792DC58D7413443147D85CD2977BA'));
 // Write Javascript code!
 /*const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;

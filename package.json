@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@chaneyoukaye/xml": "^1.0.6",
+    "crypto-js": "^4.1.1",
     "fast-xml-parser": "^4.1.3",
     "moment": "^2.29.4",
     "string_decoder": "^1.3.0",
