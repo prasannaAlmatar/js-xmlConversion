@@ -5,11 +5,13 @@ import * as crypto from 'crypto-js';
 
 let aec = 'U2FsdGVkX19jIxnEHzAwFYZbyan/QqZ1N8cglQrKg8o=';
 let b = crypto.AES.decrypt(aec, 'AB7792DC58D7413443147D85CD2977BA');
+let b1= crypto.AES.encrypt("f", 'AB7792DC58D7413443147D85CD2977BA');
+let b2 = crypto.AES.decrypt(b1, 'AB7792DC58D7413443147D85CD2977BA');
 //let ut = crypto.dec.base64.stringify(b);
 
-var words = crypto.enc.Base64.parse(b);
-var textString = crypto.enc.Utf8.stringify(words);
-console.log(b, textString);
+//var words = crypto.enc.Base64.parse(b);
+//var textString = crypto.enc.Utf8.stringify(words);
+console.log(b, b2);
 // Write Javascript code!
 /*const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
