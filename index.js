@@ -3,15 +3,23 @@ import './style.css';
 var moment = require('moment');
 import * as crypto from 'crypto-js';
 
-let aec = 'U2FsdGVkX19jIxnEHzAwFYZbyan/QqZ1N8cglQrKg8o=';
+let amount = 0;
+let utfEncoded = crypto.enc.Utf8.parse(amount.toString());
+let base64Enc = crypto.enc.Base64.stringify(utfEncoded);
+let aecEnc = crypto.AES.encrypt(base64Enc, 'AB7792DC58D7413443147D85CD2977BA');
+
+aecEnc = 'U2FsdGVkX1/3zfSrNw5nmk+8XXWfGDqBtlDffCskE8o=';
 let b = crypto.AES.decrypt(aec, 'AB7792DC58D7413443147D85CD2977BA');
-let b1= crypto.AES.encrypt("f", 'AB7792DC58D7413443147D85CD2977BA');
-let b2 = crypto.AES.decrypt(b1, 'AB7792DC58D7413443147D85CD2977BA');
+let b1 = crypto.AES.encrypt('f', 'AB7792DC58D7413443147D85CD2977BA');
+let b2 = crypto.AES.decrypt(
+  aecEnc,
+  'AB7792DC58D7413443147D85CD2977BA'
+).toString(crypto.enc.Utf8);
 //let ut = crypto.dec.base64.stringify(b);
 
-//var words = crypto.enc.Base64.parse(b);
-//var textString = crypto.enc.Utf8.stringify(words);
-console.log(b, b2);
+var words = crypto.enc.Base64.parse(b2);
+var textString = crypto.enc.Utf8.stringify(words);
+console.log(aecEnc.toString(), textString, b2);
 // Write Javascript code!
 /*const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
